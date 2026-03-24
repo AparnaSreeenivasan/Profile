@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aparna | Profile</title>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+            color: #f5f5f5;
+        }
+
+        /* HEADER */
+        header {
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #ff9eb5, #ff6f91);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .header-photo {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 25px rgba(255,255,255,0.5);
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.5em;
+            color: #111;
+        }
+
+        .header-text p {
+            margin-top: 8px;
+            font-size: 1.2em;
+            color: #222;
+        }
+
+        /* SECTION STYLE */
+        section {
+            padding: 30px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card {
+            width: 80%;
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 182, 193, 0.2);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+        }
+
+        h2 {
+            color: #ff9eb5;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        /* BUTTON */
+        button {
+            background: linear-gradient(135deg, #ff6f91, #ff3b6b);
+            border: none;
+            padding: 12px 18px;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px #ff6f91;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+        <img src="C:\Users\aparn\OneDrive\Desktop\Profile\Aparna.jpeg" class="header-photo">
+        <div class="header-text">
+            <h1>Aparna Sreenivasan</h1>
+            <p>Bioinformatics | Data Science </p>
+        </div>
+    </div>
+</header>
+
+<!-- ABOUT -->
+<section>
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I am a postgraduate student specializing in Bioinformatics and Data Science. My interests lie in integrating biological knowledge with computational methods to analyze complex datasets. I am passionate about research, problem-solving, and developing innovative solutions in healthcare and biotechnology.</p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+    <div class="card">
+        <h2>Education</h2>
+        <p>BSc Biotechnology
+           (Year - 2022 to 2025)</p>
+        <p>MSc Data Science & Bio AI (Pursuing)
+           (Year - 2025 to 2027)</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <div class="card">
+        <h2>Skills</h2>
+        <ul>
+            <li>Computer Aided Drug Design</li>
+            <li>Bioinformatics</li>
+            <li>Python & Data Analysis</li>
+        </ul>
+    </div>
+</section>
+
+<!-- HOBBIES -->
+<section>
+    <div class="card center">
+        <h2>Hobbies</h2>
+        <p id="hobby">Click to explore!</p>
+        <button onclick="showHobby()">Show Hobby</button>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <div class="card">
+        <h2>Projects</h2>
+        <ul>
+            <li>Glucose Prediction using Deep Learning</li>
+            <li>Drug Design for Rheumatoid Arthritis</li>
+          
+        </ul>
+    </div>
+</section>
+<section>
+    <div class="card">
+        <h2>Research Articles</h2>
+        <ul>
+            <li>RNA Sequence Data Science from raw data to interpretation</li>
+            <li>SPRAG: building and benchmarking a Short Programming- Related Answer Grading dataset</li>
+          
+        </ul>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section>
+    <div class="card center">
+        <h2>📬 Contact</h2>
+        <p>📞 9998009801</p>
+        <p>📧 aparna100704@gmail.com</p>
+
+        <a href="https://www.linkedin.com/in/aparna-sreenivasan-24778a281/" target="_blank">
+            <button>LinkedIn</button>
+        </a>
+    </div>
+</section>
+
+<footer>
+    Built by Aparna
+</footer>
+
+<script>
+function showHobby() {
+    const hobbies = [
+        "Singing & music",
+        "Sketching art",
+        "Solving Rubik's cube"
+    ];
+
+    let random = Math.floor(Math.random() * hobbies.length);
+    document.getElementById("hobby").innerText = hobbies[random];
+}
+</script>
+
+</body>
+</html>
